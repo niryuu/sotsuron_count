@@ -6,7 +6,7 @@ require 'kconv'
 require 'time'
 require 'net/http'
 
-def remain deadline=Time.local(2011,1,19,23,59,59)
+def remain deadline=Time.local(2011,1,21,14,59,59)
   sec = deadline - Time.now
   return "(締切りまであと#{(sec/(24*60*60)).to_i}日#{((sec%(24*60*60))/(60*60)).to_i}時間#{(((sec%(24*60*60))%(60*60))/60).to_i}分)"
 end
@@ -79,9 +79,9 @@ if no_message
 else
   message_core = "現在の"
   message_core += username+"さんの" if username
-  message_core += "卒論の文字数は約#{c}文字です"
+  message_core += "修論の文字数は約#{c}文字です"
   message = message_core + " #{remain}" unless no_limit
-  message += " #sfcdogeza #sfchametsu" unless no_tags
+  message += " #saidaidogeza #saidaihametsu" unless no_tags
   puts message
   if saykana
     Net::HTTP.start('masui.sfc.keio.ac.jp',80) do |http|

@@ -1,4 +1,4 @@
-卒論を数えるなにか
+修論を数えるなにか
 
 USAGE:
  ruby wc.rb --no-message [--dir=DIRECTRY]
